@@ -2,8 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index of {{path}}</title>
     <style>
+      * {
+        box-sizing: border-box;
+      }
       body {
         font-family: "Segoe UI", sans-serif;
         background: linear-gradient(135deg, #f0f2f5, #dfe3e8);
@@ -30,6 +34,7 @@
         font-size: 14px;
         margin-bottom: 20px;
         color: #666;
+        word-wrap: break-word;
       }
       .breadcrumb a {
         color: #3498db;
@@ -42,6 +47,7 @@
       table {
         width: 100%;
         border-collapse: collapse;
+        word-break: break-word;
       }
       td {
         padding: 12px 10px;
@@ -57,6 +63,7 @@
         color: #333;
         text-decoration: none;
         font-weight: 500;
+        word-break: break-word;
       }
       a:hover {
         color: #e74c3c;
@@ -70,6 +77,23 @@
         to {
           opacity: 1;
           transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          margin: 20px;
+          padding: 20px;
+        }
+        h1 {
+          font-size: 20px;
+        }
+        .breadcrumb {
+          font-size: 12px;
+        }
+        td {
+          padding: 10px 6px;
+          font-size: 14px;
         }
       }
     </style>
